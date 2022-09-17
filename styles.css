@@ -1,0 +1,290 @@
+/* 
+Primary:
+1. I use rgb to adjust the opacity of a color
+
+*/
+
+
+
+
+/* 
+============
+    ROOT 
+============
+
+Notes:
+1. padding and margin set to 0 to remove the default values of the elements.
+2. I used variables so that changes will be efficient.
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+    --primary-color: white;
+
+    text-align: justify;
+}
+
+
+
+
+
+
+/* 
+============
+    ROOT 
+============
+
+Notes:
+1. Edited the default scrollbar to suit the theme.
+
+*/
+
+::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: linear-gradient(transparent, white, black); */
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    transition: cbackground 1s ease;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+/* 
+============
+    BODY 
+============
+
+Notes:
+1. I used line-height for readability.
+2. I darkened the background for readability.
+3. I used rgb to adjust the opacity of a color.
+
+*/
+
+body {
+    line-height: 1.6;
+    background-image: url('background2.jpg');
+    background-blend-mode: darken;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+/* 
+============
+    BODY 
+============
+
+Notes:
+1. Margin for all sides to make it look like a letter.
+2. Added Hue-Rotate for fun colors, Christmas is near :)
+
+*/
+
+#letter {
+    background-color: rgb(245, 245, 245, 0.5);
+    border-radius: 20px;
+
+    margin: 90px 90px; 
+    padding: 50px 50px;
+
+    transition: all 0.8s linear;
+
+    border: solid 3px white;
+}
+
+#letter:hover {
+    box-shadow: 0px 0px 15px cyan;
+
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#inner {
+    border: solid 3px black;
+    padding: 20px 20px;
+}
+
+
+
+
+
+
+/* 
+==================
+    Title Head 
+==================
+
+Notes:
+1. I used flexbox to center the heading 1 and 2
+2. I reduced the font-weight of heading 2 for emphasis
+3. I used max-width: max-content to fit the space exactly on the width of the content. 
+   margin-inline: auto; centers the div, flexbox will not work as it will mess up the underline;
+4. I used max-content for the parent divs so that the underline will not overlap.
+5. I added a white underline whenever you hover over the heading 2.
+
+*/
+
+#letter-head h1, #letter-head h2 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+#letter-head {
+    position: relative;
+}
+
+#title, #heading, #name, #yearAndSection {
+    max-width: max-content;
+    margin-inline: auto;
+}
+
+.underline {
+    content: '';
+    width: 100%;
+    height: 3px;
+
+    background-color: black;
+
+    transition: all 0.3s;
+    transform: scale(0, 1);
+}
+
+.labels:hover .underline{
+    transform: scale(1, 1);
+}
+
+
+
+
+/* 
+==========================
+    Body of the Letter
+==========================
+
+Notes:
+1. Increased paragraph font-size
+
+*/
+
+p {
+    font-size: 20px;
+}
+
+
+
+
+
+/* 
+==========================
+    Body of the Letter
+        Gratitude
+==========================
+
+Notes:
+1. I separated this part for emphasis using div and breaks
+2. When you hover, the whole division will zoom in providing more emphasis.
+*/
+
+.section {
+    position: relative;
+}
+
+.gratitude {
+    display: flex;
+
+    transition: all 0.5s;
+}
+
+.gratitude:hover {
+    transform: scale(1.048);
+}
+
+.gratitude li {
+    list-style-type: none;
+}
+
+.gratitude li a {
+    display: block;
+
+    padding: 10px 20px;
+    
+    text-decoration: none;
+
+    color: black;
+
+    font-size: 20px;
+    font-weight: 300;
+
+    transition: all 0.5s linear;
+}
+
+.gratitude li a:hover {
+    color: var(--primary-color);
+}
+
+.gratitude li a::after {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(26, 26, 26);
+    
+    position: absolute;
+
+    transform: scaleY(0);
+    transition: 0.5s;
+
+    z-index: -1;
+}
+
+.gratitude li a:hover::after {
+    transform: scaleY(1);
+}
+
+/* 
+==========================
+        Hamburger
+==========================
+
+Notes:
+*/

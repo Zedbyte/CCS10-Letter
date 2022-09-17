@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap'); /*Montserrat*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* 
+==========================
+      NAVIGATION BAR
+==========================
+
+Notes:
+1. I added a navigation bar to put the hamburger as a toggle for the letter.
+2. I set the navigation bar to sticky so that it will stick as the user scroll.
+3. I set the z-index to 10 so that it will be over all elements.
+4. Max-width 1500px is used for the responsiveness, but it is not necessary, It is just my `go-to` max-width.
+5. Margin: 0 auto is crucial to center the container inside the navbar class.
+6. I used space-between the separate my name (MJBS) and the hamburger.
+*/
+
+.navbar {
+    background-color: black;
+
+    height: 70px;
+    top: 0;
+
+    position: sticky;
+
+    z-index: 10;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.flex {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+
+
+/* 
+==========================
+     NAVIGATION BAR
+          NAME
+==========================
+
+Notes:
+1. 
+*/
+
+#Mark {
+  color: white;
+
+  font-family: 'Montserrat';
+  font-size: 35px;
+    
+  letter-spacing: 3px;
+
+}
+
+#S {
+    color: gold;
+    font-family: 'Montserrat';
+}
+
+
+
+/* 
+==========================
+     HAMBURGER
+==========================
+
+Notes:
+1. The hamburger is a switch to show the letter.
+2. I used bootstrap for the arrow and added a class name "arrow-angle" to overwrite the initial color value.
+*/
+
+.hamburger {
+    display: block;
+
+    position: relative;
+
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+
+    background-color: white;
+    margin: 5px 0;
+    
+    border-radius: 10px;
+}
+
+.arrow-angle {
+    color: white;
+
+    position: absolute;
+}
