@@ -78,23 +78,23 @@ Notes:
     font-family: 'Montserrat';
 }
 
+abbr {
+    text-decoration: none;
+}
 
 
 /* 
 ==========================
-     HAMBURGER
+       HAMBURGER
 ==========================
 
 Notes:
-1. The hamburger is a switch to show the letter.
-2. I used bootstrap for the arrow and added a class name "arrow-angle" to overwrite the initial color value.
+1. .active is added using Javascript when the hamburger is clicked, the line are rotated to make it look like an X
+
 */
 
 .hamburger {
     display: block;
-
-    position: relative;
-
 }
 
 .hamburger-line {
@@ -105,10 +105,107 @@ Notes:
     margin: 5px 0;
     
     border-radius: 10px;
+
+    transition: 0.7s;
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+/* 
+==========================
+       HAMBURGER
+      Descriptors
+==========================
+
+Notes:
+1. The hamburger is a switch to show the letter.
+2. I used bootstrap for the arrow and added a class name "arrow-angle" to overwrite the initial color value.
+3. Inner-container is set to flexbox so that its contents are positioned side-by-side.
+4. The paragraph is set to inline to place it INLINE before the arrow.
+
+*/
+
+
+.click {
+    display: inline;
+    position: relative;
+
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 15px;
+
+    margin: 0 5px;
+
+    transition: all 0.8s linear;
+}
+
+.click.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.clickable {
+    transition: all 0.8s linear;
+}
+
+.clickable.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.inner-container {
+    display: flex;
 }
 
 .arrow-angle {
     color: white;
 
-    position: absolute;
+    font-size: 20px;
+
+    margin-right: 5px;
+}
+
+/* 
+==========================
+       HAMBURGER
+        LETTER
+==========================
+
+Notes:
+1. opacity 0 and visibility are hidden instead of display: none because you cannot put a transition between display:none and display: block;
+2. hr color was set to white, so I overlapped the hr line using border and setting it to black.
+*/
+
+#letter {
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scaleY(0);
+    transition: all 1s;
+}
+
+#letter.active {
+    opacity: 1;
+
+    transform: scaleY(1);
+    visibility: visible;
+}
+
+hr {
+    border: solid 1px black;
 }

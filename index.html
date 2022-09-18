@@ -10,11 +10,14 @@
     <!-- CSS Stylesheet -->
     <link href="styles.css" rel="stylesheet" type="text/css">
 
-     <!-- Hamburger CSS Stylesheet -->
-     <link href="hamburger.css" rel="stylesheet" type="text/css">
+    <!-- Hamburger CSS Stylesheet -->
+    <link href="hamburger.css" rel="stylesheet" type="text/css">
 
-     <!-- BootStrap -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">   
+    <!-- Exercise Container CSS Stylesheet -->
+    <link href="primary.css" rel="stylesheet" type="text/css">
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">   
 
     <title>CCS10 Letter</title>
 </head>
@@ -24,12 +27,12 @@
 
         <div class = "container flex">
 
-            <h1 id = "Mark">MJB<span id = "S">S.</span></h1>
+            <h1 id = "Mark"><abbr title = "Mark Jerome B. Santos">MJB<span id = "S">S.</abbr></span></h1>
 
             <div class = "inner-container">
 
                 <div class = "arrow">
-                    <i class="bi bi-arrow-90deg-right arrow-angle"></i>
+                    <p class = "click">Click to show the letter</p><i class="bi bi-arrow-right arrow-angle clickable"></i>
                 </div>
 
                 <div class = "hamburger">
@@ -43,13 +46,40 @@
 
     </div>
 
+    <div id = "Exercise">
+
+        <div class = "mouse-container">
+
+            <i class="bi bi-arrow-down arrow-angle arrow-down"></i>
+
+            <div class = "mouse">
+                <span class = "wheel">
+
+                </span>
+            </div>
+        </div>
+
+        <div id = "Exercise-container">
+
+            <h1 class = "Intro">CCS10 Summarized Activity 1</h1>
+            
+            <div id = "file">
+                <a href = "Narrative Report.docx" download>Narrative Report</a>
+                <p>Click to download the Narrative Report</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
     
     <div id = "letter">
 
         <div id = "inner">
             <div id = "letter-head">
                 <div id = "title">
-                    <h1 class = "heading1">Title</h1>
+                    <h1 class = "heading">Title</h1>
 
                     <div class = "labels">
                         <h2>CCS10 Summarized Activity-1</h2>
@@ -59,7 +89,7 @@
                 </div>
 
                 <div id = "heading">
-                    <h1>Heading</h1>
+                    <h1  class = "heading">Heading</h1>
 
                     <div class = "labels">
                         <h2>A Letter to Myself About HTML Programming</h2>
@@ -69,7 +99,7 @@
                 </div>
 
                 <div id = "name">
-                    <h1>Name</h1>
+                    <h1  class = "heading">Name</h1>
 
                     <div class = "labels">
                         <h2>Mark Jerome B. Santos</h2>
@@ -79,7 +109,7 @@
                 </div>
 
                 <div id = "yearAndSection">
-                    <h1>Year and Section</h1>
+                    <h1  class = "heading">Year and Section</h1>
 
                     <div class = "labels">
                         <h2>BSIT 1 -A</h2>
@@ -89,10 +119,13 @@
                 </div>
             </div>
         
+            <br>
+            <hr>
+            <br>
 
             <div id = "body">
                 <p>
-                    Dear Self,
+                    Dear Self, <br>
                     How are you doing today?  Kamusta na?
                     I hope you are doing fine while reading this letter of us.
                     During the Midterm Period in CCS10 – Introduction to Computing (Laboratory Part), 
@@ -143,6 +176,9 @@
         
 
     </div>
+
+    <script src = "main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 
 </body>
 </html>

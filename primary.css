@@ -1,0 +1,160 @@
+/* 
+==========================
+       MOUSE SYMBOL
+==========================
+
+Notes:
+1. the symbol was contained in a container that is set to flex so it can go side-by-side with the arrow pointing down.
+2. the mouse was set to relative so that the wheel can be set to absolute, relative to the position of the mouse.
+3. The animation is for the downward motion of the wheel.
+4. The arrow-down beside the mouse is set to show when the hamburger is clicked else it is hidden.
+
+*/
+
+.mouse-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin: 30px auto;
+}
+
+.mouse {
+    position: relative;
+
+    width: 32px;
+    height: 60px;
+
+    border: solid 4px white;
+    border-radius: 32px;
+}
+
+.wheel {
+    position: absolute;
+    
+    width: 8px;
+    height: 10px;
+
+    top: 20%;
+    left: 50%;
+
+    background-color: white;
+    border-radius: 6px;
+
+    transform: translate(-50%, 0);
+    animation: scroll 1s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+    }
+    20%, 30% {
+        opacity: 1;
+    }
+    90% {
+        transform: translate(-50%, 130%);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.arrow-down {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.7s linear;
+}
+
+.arrow-down.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 
+==========================
+          PRIMARY
+==========================
+
+Notes:
+1. I used max-width and margin auto to center the container, I did not use flexbox so that its contents will stay as block elements.
+2. I used flexbox for anchor and paragraphs inside the file div to center them.
+3. I set the opacity to none and visibility when hamburger is clicked for emphasis of the letter.
+4. Pointer-events is set to none to avoid misclicking the downloadable file when the container is hidden.
+5. I added text and box shadow to the container to make it look like glowing, the text and box shadows are doubled to make the shadow thicker.
+6. the transform perspective property make the ::before selector (square) look 3d or more like an isosceles trapezoid.
+7. the rotateX is needed to achieve the 3d look of perspective, without it perspective will only look like it reduced the size of the light.
+8. scale is for the adjustment of size, first value of scale is for scaleX and the second value is for scaleY.
+9. the pseudo-selector before is the reflection of the shadow, I set the blur to 64px to get the light texture.
+
+*/
+
+#Exercise-container {
+    border: solid 2px white;
+
+    position: relative;
+
+    max-width: max-content;
+    margin: 0 auto;
+
+    border-radius: 15px;
+    padding: 20px 20px;
+
+    transition: all 0.8s linear;
+
+    text-shadow: 0 0 3px rgb(255, 255, 255, 0.3), 0 0 16px cyan;
+
+    box-shadow: 0 0 10px cyan, 0 0 10px cyan;
+}
+
+#Exercise-container::before {
+    content: '';
+
+    position: absolute;
+    top: 140px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient( cyan, white, cyan);
+    
+    transform: perspective(120px) rotateX(55deg) scale(1, 0.5);
+
+    filter: blur(64px);
+}
+
+#file > a, #file > p {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+
+    font-family: 'Montserrat';
+}
+
+#file > a {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+#Exercise-container.active {
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+
+.Intro {
+    color: white;
+
+    font-family: 'Montserrat';
+
+    display: flex;
+    justify-content: center;
+}
