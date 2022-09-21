@@ -43,11 +43,17 @@ Notes:
     border-radius: 6px;
 
     transform: translate(-50%, 0);
+}
+
+.wheel.active {
     animation: scroll 1s linear infinite;
 }
 
 @keyframes scroll {
     0% {
+        opacity: 1;
+    }
+    1% {
         transform: translate(-50%, 0);
     }
     20%, 30% {
@@ -148,8 +154,6 @@ Notes:
     pointer-events: none;
 }
 
-
-
 .Intro {
     color: white;
 
@@ -157,4 +161,38 @@ Notes:
 
     display: flex;
     justify-content: center;
+}
+
+.cursor {
+    display: inline-block;
+
+    height: 55px;
+    width: 2px;
+
+    color: white;
+
+    opacity: 1;
+
+    animation: blink 1s infinite;
+
+    position: absolute;
+}
+
+
+@keyframes blink {
+    0% {
+        background-color: white;
+    }
+    49% {
+        background-color: white;
+    }
+    50% {
+        background: transparent;
+    }
+    99% {
+        background: transparent;
+    }
+    100% {
+        background-color: white;
+    }
 }

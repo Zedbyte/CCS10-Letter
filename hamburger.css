@@ -187,7 +187,8 @@ Notes:
 ==========================
 
 Notes:
-1. opacity 0 and visibility are hidden instead of display: none because you cannot put a transition between display:none and display: block;
+1. opacity 0 and visibility are hidden instead of display: none because you cannot put a transition between display:none and display: block; 
+   It will only show/dissapear instantly.
 2. hr color was set to white, so I overlapped the hr line using border and setting it to black.
 */
 
@@ -195,14 +196,14 @@ Notes:
     opacity: 0;
     visibility: hidden;
 
-    transform: scaleY(0);
+    transform: scaleY(0, 1);
     transition: all 1s;
 }
 
 #letter.active {
     opacity: 1;
 
-    transform: scaleY(1);
+    transform: scaleY(1, 1);
     visibility: visible;
 }
 

@@ -69,14 +69,18 @@ Notes:
 
 
 /* 
-============
-    BODY 
-============
+==========================
+    BODY OF THE WEBPAGE 
+==========================
 
 Notes:
 1. I used line-height for readability.
 2. I darkened the background for readability.
 3. I used rgb to adjust the opacity of a color.
+4. Background image is set to no repeat so that the image will not repeat if the viewport increases.
+5. background-size is set to cover the entire page.
+6. background-attachment set to fixed so that the image will not zoom in when the viewport increases. The image is fixed on its initial width and height and will not move even if you scroll down.
+7. scroll-behavior (experimental) is set to smooth, only works on some browsers. 
 
 */
 
@@ -88,8 +92,8 @@ body {
     background-color: rgb(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
-
-    /* scroll-behavior: smooth; */
+    background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 
@@ -99,9 +103,9 @@ body {
 
 
 /* 
-============
-    BODY 
-============
+==============
+    LETTER 
+==============
 
 Notes:
 1. Margin for all sides to make it look like a letter.
@@ -116,20 +120,48 @@ Notes:
     margin: 20px 90px; 
     padding: 50px 50px;
 
-    transition: all 0.8s linear;
+    transition: 10s;
 
     border: solid 3px white;
-}
 
-#letter:hover {
-    box-shadow: 0px 0px 15px cyan;
+    box-shadow: 0px 0px 15px azure, 0 0 25px azure;
 
-    animation: glow 2s infinite;
+    animation: glow 10s linear 1s infinite;
 }
 
 @keyframes glow {
+    0% {
+        box-shadow: 0 0 5px azure, 0 0 15px azure;
+    }
+    10% {
+        box-shadow: 0 0 5px pink, 0 0 15px pink;
+    }
+    20% {
+        box-shadow: 0 0 5px lightgoldenrodyellow, 0 0 15px lightgoldenrodyellow;
+    }
+    30% {
+        box-shadow: 0 0 5px yellow, 0 0 15px yellow;
+    }
+    40% {
+        box-shadow: 0 0 5px lime, 0 0 15px lime;
+    }
+    50% {
+        box-shadow: 0 0 5px aqua, 0 0 15px aqua;
+    }
+    60% {
+        box-shadow: 0 0 5px pink, 0 0 15px pink;
+    }
+    70% {
+        box-shadow: 0 0 5px lightgoldenrodyellow, 0 0 15px lightgoldenrodyellow;
+    }
+    80% {
+        box-shadow: 0 0 5px yellow, 0 0 15px yellow;
+    }
+    90% {
+        box-shadow: 0 0 5px lime, 0 0 15px lime;
+    }
     100% {
-        filter: hue-rotate(360deg);
+        box-shadow: 0 0 5px aqua, 0 0 15px aqua;
     }
 }
 
@@ -137,9 +169,15 @@ Notes:
     border: solid 3px black;
 
     padding: 20px 20px;
+
+    animation: hue 10s linear infinite;
 }
 
-
+@keyframes hue {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
 
 
 
@@ -185,6 +223,11 @@ h2 {
     background-color: white;
 
     color: black;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://media.istockphoto.com/photos/old-brown-paper-parchment-background-design-with-distressed-vintage-picture-id1283615709?k=20&m=1283615709&s=612x612&w=0&h=EZF3-0n6RStR5gM23-kh5WP2_k6XvKcYqNq-fM73xMQ=');
+
 }
 
 #title, #heading, #name, #yearAndSection {
@@ -237,11 +280,143 @@ h2 {
 
 Notes:
 1. Increased paragraph font-size
+2. Salutation increased in size, and indented it using margin-left.
+3. I added an emphasis class to use for anything that I want to emphasize.
+4. I added an indent class to indent any part of the letter.
+5. added an appearing box design for classes .parent-box and box. 
 
 */
 
-p {
-    font-size: 20px;
+#Dear {
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.indent {
+    margin-left: 55px;
+}
+
+.emphasis {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.parent-box {
+    position: relative;
+}
+
+.box::after {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgb(26, 26, 26);
+    
+    position: absolute;
+
+    transform: scaleY(0);
+    transition: 0.5s;
+
+    z-index: -1;
+
+}
+
+.box {
+    transition: 0.5s;
+    border: dashed 1px black;
+}
+
+.box:hover {
+    color: white;
+}
+
+.box:hover::after {
+    transform: scaleY(1);
+}
+
+.first-part, .second-part, .third-part, .fourth-part, .fifth-part, .fifth-sub-part, .last-part {
+    font-size: 23px;
+}
+
+.fifth-sub-part {
+    background-image: linear-gradient(to right, yellow, cyan, orange);
+    max-width: max-content;
+    margin: 0 auto;
+    
+    padding: 0 5px;
+
+    border-radius: 5px;
+}
+
+#opening-tag {
+    font-weight: bolder;
+}
+
+.size {
+    font-size: 35px;
+}
+
+.letter-ul > li {
+    margin: 10px 30px;
+}
+
+footer {
+    font-size: 30px;
+
+    position: relative;
+    left: 0;
+}
+
+#me {
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 50px 90px;
+}
+
+.icon-html-mini {
+    font-size: 35px;
+
+    display: flex;
+    align-self: center;
+
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+
+    transition: all 0.5s linear;
+}
+
+.icon-html-mini:hover {
+    transform: scale(1.2);
+
+    text-shadow: 10px 10px 5px cyan;
+    
+}
+ 
+#right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+q {
+    background-image: linear-gradient(to right, yellow, lime, orange);
+
+    padding: 10px 10px;
+    border-radius: 10px;
+
+    transition: all 0.5s linear;
+}
+
+q:hover {
+    transform: scale(1.2);
 }
 
 
@@ -270,6 +445,21 @@ Notes:
 }
 
 .gratitude:hover {
+    transform: scale(1.048);
+}
+
+.sky {
+    transition: all 0.5s linear;
+    color: black;
+
+    display: inline-block;
+
+    border-radius: 3px;
+}
+
+.gratitude:hover .sky {
+    background-color: aqua;
+
     transform: scale(1.048);
 }
 
@@ -319,10 +509,3 @@ Notes:
     transform: scaleY(1);
 }
 
-/* 
-==========================
-        Hamburger
-==========================
-
-Notes:
-*/

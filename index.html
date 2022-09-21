@@ -19,6 +19,11 @@
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">   
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>CCS10 Letter</title>
 </head>
 <body>
@@ -27,7 +32,7 @@
 
         <div class = "container flex">
 
-            <h1 id = "Mark"><abbr title = "Mark Jerome B. Santos">MJB<span id = "S">S.</abbr></span></h1>
+            <h1 id = "Mark"><abbr title = "Mark Jerome B. Santos">MJB<span id = "S">S.</abbr><span class = "cursor">&nbsp;</span></span></h1>
 
             <div class = "inner-container">
 
@@ -61,11 +66,11 @@
 
         <div id = "Exercise-container">
 
-            <h1 class = "Intro">CCS10 Summarized Activity 1</h1>
+            <h1 class = "Intro"></h1>
             
             <div id = "file">
-                <a href = "Narrative Report.docx" download>Narrative Report</a>
-                <p>Click to download the Narrative Report</p>
+                <a href = "Narrative Report.docx" class = "anchor" download></a>
+                <p class = "desc-download"></p>
             </div>
 
         </div>
@@ -73,7 +78,7 @@
     </div>
 
 
-    
+
     <div id = "letter">
 
         <div id = "inner">
@@ -125,15 +130,81 @@
 
             <div id = "body">
                 <p>
-                    Dear Self, <br>
-                    How are you doing today?  Kamusta na?
-                    I hope you are doing fine while reading this letter of us.
-                    During the Midterm Period in CCS10 – Introduction to Computing (Laboratory Part), 
-                    I   learned the Basic of HTML; how to create the basic html structures, html tags, 
-                    headings, different paragraph alignments, formatting text commonly being used in 
-                    Mathematical  Notations,  Physics,  and  Chemistry,  also,  in  terms  of  its  color,  size, 
-                    and font type/face, and creating Lists of Different Types.  We were taught of using 
-                    combination  of  colors  in  text  and  sizes.    
+                    <div class = "first-part">
+                        <span id = "Dear">Dear Self,</span> <br>
+                        <span class = "emphasis" size = "+3px"><b>I am proud of you.</b></span> <br>
+                        <span class = "indent"><i>How are you doing now?</i></span><i> Is everything okay?</i><i> Where are you heading now?</i> <i> Is there progress?</i>
+                        I hope this letter finds you <strong>well.</strong> You've survived a lot of <ins>hurdles.</ins> <strong>Alone.</strong> You taught yourself how to be <strong>strong</strong> at all times. 
+                        I can say that ever since you were a <small>child</small>, you were <ins>independent</ins>. Stop <sub>underestimating</sub> yourself. You were always <span style="color:red;">fa</span><span style="color:orange">sc</span><span style="color: yellow;">in</span><span style="color:lime;">at</span><span style="color: cyan;">ed</span> with 
+                        <span class = parent-box><span class = "box"><strong>technology</strong> and <strong>computers</strong></span></span>
+                        from day <ins>1</ins> until <strong>today</strong>. <mark>I still remember the days that you were dreaming of having your personal computer.</mark>
+                        In the past, you were always trying to borrow computers and gadgets from your relatives, just to play with them 
+                        because you <del>don't have one.</del> You were deprived of things that <small>kids</small> had but you're okay with it. You were okay to <em>adjust and to adapt.</em> 
+                        You tried making your <sup>imaginary</sup> <ins>console, phone, or even a laptop</ins> using <span style="background-color: burlywood;">cardboards.</span> You are the type of person that likes to ask the <b>how and why</b> behind everything, 
+                        then you often ends up <b>stressing</b> <sup>over</sup> it. You are <span style="font-size: 35px;">overthinking</span> things that shouldn't be and I think that's the price of <ins>knowledge</ins>. 
+                        Your <strong>hardwork</strong> gave you knowledge on things. I realized that being too smart can be hard,   sometimes being <del>oblivious</del> is a <span style="background-color: green;">good</span> thing. 
+                        Time passed, at the middle of <ins>5th grade</ins>, <mark><strong>you were given your own computer.</strong></mark> I can still remember the <span style="background-image: linear-gradient(to right,yellow, cyan, orange);">excitement, the joy, and the happy feeling</span> that you can't 
+                        explain and <b>nothing</b> can replace. <i>Do you still remember the first thing that you did with it?</i> <ins>You tried on playing a song from Youtube but it didn't play.</ins>
+                        <i>Why?</i> There was no internet connection at that time. You were wondering why and by the time that you realized, <em>you thought that you know nothing of technology.</em>
+                        So you <strong>studied hard</strong> about it, just to play those games that you dreamt of. From <em>simple troubleshooting, tinkering, and re-connecting of cables.</em> At that time, 
+                        <b>Information Technology</b> was still <span style="font-size: 30px;">growing.</span> But still, you decided that you are going to take <abbr title="Bachelor of Science in Information Technology">BSIT</abbr> in college. Now you have it. Your dream is here, your first step is 
+                        happening. I can still remember the time of pandemic, It was a <strong>life changer</strong> for aspiring developers. You had so much time so you chose to study the fundamentals of 
+                        programming. You were so clueless about it, but you worked hard. Even if the <strong><span style="text-decoration: underline;"><a href ="https://en.wikipedia.org/wiki/Impostor_syndrome" target="_blank">impostor syndrome</a></span></strong> hits you hard, <strong>you didn't give up</strong> and I thank you for that. 
+                        You tried on making simple programs until you learned even the <small>basics.</small> <strong>Your self-study is worth it.</strong>
+                    </div>
+
+                    <div class = "second-part">
+                        During your <ins>Senior High School Life</ins>, you were excited on taking the <abbr title="Information, Communication, and Technology">ICT</abbr> strand. However, you were not taught of anything <sup>important</sup> about <abbr title="Information Technology">IT</abbr>. 
+                        You were <sub>dissapointed</sub> but still graduated, though you didn't learn the things that you expected to learn. <abbr title="Senior High School">SHS</abbr> stopped you from <em>self-studying</em> as you don't 
+                        have any more time to do it because of the <span style="font-size: 25px;">amount</span> of <b>activities and performance tasks</b> that you have to do especially that you were still adjusting 
+                        with <ins>online classes.</ins> The <strong>burnout hit you hard</strong>, you were having a <b>hard time</b> for <ins>2</ins> years. <em>But you still did it, dude. </em>
+                        During the vacation before college, you continued your self-study. You <storng>studied hard</storng> to the point that you were having <strong>headaches</strong> almost <ins>every day</ins>. 
+                        You stopped <del>playing games</del>, and focused on studying <span class = "parent-box"><span class = "box">programming and technology.</span></span> It was so <strong>worth</strong> it.  You learned <span style="font-size: 25px;">A LOT</span> and when I say <span style="font-size: 25px;">LOT I MEAN A LOT</span>. 
+                        You learned what's behind technology, from the <em><strong>transistors, binary, and etc.</strong></em> You learned programming languages like <mark><b>Java, Python, JavaScript, C++, and C.</b></mark>
+                        You even enrolled in <span class = "emphasis">CS50x of Harvard</span> but at the moment it's giving you a hard time so you put it on hold as you can't do the <em>CS50x</em> course and your <em>studies</em> simultaneously 
+                        so it will have to wait. You also learned Web Development, from the structure of HTML, CSS, and JavaScript, to the depths of HTML DOM.
+                        You learned technical terms in technology like <i>APIs, Version Control, and so much more</i> that if I listed them here It will make this letter so <span style="font-size: 25px;">looong.</span>
+                    </div>
+
+                    <div class = "third-part">
+                        Now in College, the first thing that you did is you created a <b>Discord Bot</b> for your section using the <i>discord api</i>. 
+                        Now, you are being taught of Programming for <span style="font-size: 25px;text-decoration: underline;">REAL</span>. During the <ins>Midterm Period in CCS10 - Introduction to Computing</ins>, 
+                        you were taught of  <span style="color:red;">di</span><span style="color:orange">fe</span><span style="color: yellow;">re</span><span style="color:lime;">nt</span> jobs that you can apply to in the <strong>future</strong>. In the Lab Part, the first thing that you did is you were asked to <span style="display:flex;justify-content: center;">center</span> a text, 
+                        and you <em>successfully did it!</em> The self-study is now being practiced. You are being taught of <abbr title="HyperText Markup Language">HTML</abbr> more in <sub>depth</sub>. <b>Sir Ray Nicolas</b> is teaching you things that you 
+                        didn't even know in the past. We didn't know that HTML has so much things in its pockets, and we thought that it only relies on CSS. I'm enjoying the class because 
+                        a professional is now teaching me and I don't have to rely so much on self-studying similar to the <del>past</del> anymore. Sir Ray taught you the fundamentals of <abbr title="HyperText Markup Language">HTML</abbr>, 
+                        from the basics like; 
+
+                        <ul class = "letter-ul">
+                            <li style="color:blue">html tags</li>
+                            <li style="color:red"><h1>headings</h1></li>
+                            <li style="color:blueviolet"><p>paragraphs</p></li>
+                            <li style="color:violet">text colors</li>
+                            <li style="color:orangered"><table><tr><th>tables</th></table></tr></li>
+                            <li style="color:green">
+                                <dl>
+                                    description lists
+                                    <dd>hi i'm a definition description</dd>
+                                </dl>
+                            </li>
+                            <li style="color:blue">unordered list</li>
+                            <li style="color:red">
+                                <ol>
+                                    <li type="none">ordered list</li>
+                                </ol>
+                            </li>
+                            <li style="color:blueviolet"><u>computer shortcuts</u></li>
+                            <li style="color:violet">this <em>list</em> itself :)</li>
+                            <li style="color:orangered">font <span class="size">size</span> IN HTML AND NOT IN CSS?!</li>
+                            <li style="color:green">there is a <basefont>basefont</basefont> in html?!</li>
+                            <li style="color:blue" align = "center"><center>EVEN THE <del>CENTER</del> TAG THAT WE DIDN'T EVEN KNOW EXISTS (maybe because it's deprecated).</center></li>
+                        </ul>
+
+                        <br>
+                        
+                        At this point, I realized that we <ins>skipped</ins> some things in <abbr title="HyperText Markup Language"></abbr>HTML</abbr> but it's okay, Sir Ray will teach you!
+                    </div>
+
                     <br>
                     <br>
                     <br>
@@ -142,34 +213,62 @@
 
                         <ul class = "gratitude">
                             <li>
-                                <a> 
-                                    I  am  thinking  what  if  I  create  a  “Two 
-                                    Sentence’s Letter of Appreciation” addressed to our parents for always being there 
-                                    by  our  side  in  this  time  of  pandemic,  in  HTML  using  the  colors  of  rainbow  with 
-                                    different  text  sizes  using  the  absolute  and  relative  scale,  and  small  and  big  tags.  
+                                <a class = "type"> 
+                                    This part of the letter is for our parents. They helped us so much in achieving our goals. Without them, maybe it will be hard to live. 
+                                    Pursuing BSIT without them to guide us would be the hardest part of our life. So with this, I would like to thank our parents for sticking beside us 
+                                    so you have to study hard and graduate to achieve your promise in ourselves that you will give them everything that they didn't have during their days. 
+                                    To give them rest and happiness in this world will be our main goal, remember? 
+                                    We are very close to that goal, so don't let the incoming challenges burn you down. <div class = "sky">Together, we will soar the skies.</div>
                                 </a>
                             </li>
                         </ul>
 
                     </div>
-                    
-                    <br>
-                    <br>
-                    <br>
-                    With  these  things  in  mind,  I  guess  we  will  be  jumping  up  and  down  with  joy  and 
-                    laughter, making the HTML world getting clearer and better to enjoy with. 
-                    Additionally, I believed it will also enable smaller minds to grow bigger and larger 
-                    until  it  reaches  its  maximum  potential.    Looking  forward  to  the  next  HTML  topic 
-                    waiting  ahead  of  us,  will  surely  double  if  not  triple  the  current  knowledge  and 
-                    learning that we are having in this particular area of study. “Doing all of these things 
-                    in mind with ABSOLUTE HONESTY will truly make ourselves proud and our parents 
-                    even prouder”.  Good Luck and Happy Learning to Us All!!!
-                </p>
 
-                <footer>
-                    Truly yours,<br> 
-                    <strong>Me</strong>
-                </footer>
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class = "fourth-part">
+                        For the <em>last part of the letter</em>, I would like to tell you to avoid on comparing <sup>yourself</sup> with others. Compare <span style="font-size:30px;">yourself</span> with <span style="font-size:30px;">yourself</span>. 
+                        <b>To grow is our goal</b>. <em>Remember that we have our own timeline in life.</em> We have come this <span class="indent">far</span>, and yet we still have <span style="font-size: 25px;">more</span> to look forward to. 
+                        <strong>Do not be intimated</strong> with bugs, a new bug means <ins>progress</ins>. We learn by our <del>mistakes</del>. Our parents tried so <strong>hard</strong> to give this chance so <em>let's not waste it.</em>
+                    </div>
+                    <br>
+                    <div class = "fifth-part">
+                        <span style="display:flex;justify-content:center"><mark><em>The challenge is now here, so don't give up on us. You worked really hard for this so study hard and don't waste any opportunity.</em></mark></span>
+                    <br>
+                        <div class = "fifth-sub-part emphasis">
+                            The battle just started so I will end this letter with this opening tag,  <span id = "opening-tag"><></span>. 
+                            This will serve as a symbol that it is not the end, It is just the beginning.
+                        </div>
+                    </div>
+                    
+                    <div class = "last-part">
+                        With  these  things  in  mind,  I  guess  we  will  be  jumping  <sup>up</sup>  and  <sub>down</sub>  with  joy  and 
+                        laughter, making the <abbr title = "HyperText Markup Language">HTML</abbr> world getting <span style="font-size: 25px;">clearer and better</span> to enjoy with. 
+                        Additionally, I believed it will also enable <small>smaller</small> minds to grow <span style="font-size: 25px;"><big>bigger and larger</big></span>
+                        until  it  reaches  its  <sup>maximum</sup>  potential.    Looking  forward  to  the  next  HTML  topic 
+                        waiting  ahead  of  us,  will  surely  double  if  not  <font size = "+3">triple</font> the  current  knowledge  and 
+                        learning that we are having in this particular <ins>area of study</ins>. 
+                        
+                        <span class = "quote emphasis">
+                            <q>
+                                <code>Climb the mountains and destroy the walls. We'll get that life soon.</code>
+                            </q>
+                        </span>
+                    </div>
+                </p>
+   
+                <br>
+                <br>
+
+                <div id = "me">
+                    <footer>
+                        Truly yours,<br> 
+                        <strong><span id = "right">Me <i class="fa fa-code icon-html-mini"></i></span></strong>
+                    </footer>
+                </div>
 
             </div>
         </div>

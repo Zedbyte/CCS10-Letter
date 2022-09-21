@@ -112,3 +112,49 @@
     background-color: whitesmoke;
     transition: all 0.8s linear;
 }
+
+2. The if part checks if the letter does not have an .active class, so it can add the class .none (adding display: none). If it does have the .active class then it will not do anything.
+   I used this so that it will let the .active class (opacity: 0) finish animating ('transitionEND') before adding (display: none) because you can't animate (display: block) to (display: none)
+   It will just dissapear instantly without following the transition delay.
+   I have to add display: none so that it will not take space (scrollable whitespace) when it is hidden.
+
+
+    if (letter.classList.contains('active')) {
+      hamburger.addEventListener('click', () => {
+        letter.classList.remove('none');
+      });
+    }
+
+
+    .parent-drop {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 20px ;
+
+    position: absolute;
+
+}
+
+.droplet {
+    width: 100px;
+    height: 100px;
+    border-radius: 40rem/40rem;
+
+    background-color: rgb(99,190,239);
+
+    position: absolute;
+
+    transform: translate(750%);
+
+    box-shadow: inset 9px 50px 20px 0px blue;
+}
+
+.droplet::after {
+    content: '';
+    width: 20px;
+    height: 10px;
+
+    background-color: white;
+    position: absolute;
+}
