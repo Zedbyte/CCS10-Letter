@@ -1,4 +1,4 @@
-<h1>Whole markdown is set as comment, edit to see.</h1>
+<h1>Whole markdown is set as comment.</h1>
 
 <!-- CCS10 Lab Summarized Activity 1
 Mark Jerome B. Santos BSIT 1 - A
@@ -35,7 +35,7 @@ III.	Features
 For my webpage, I divided it into sections and parts.
 • Navigation Bar 
  
-For this Navigation Bar, I used nested div tags to contain my name MJBS. (abbr) and the hamburger which is a switch to show the letter. I did this so that when the page is loaded, the typing effect I made with Javascript will not cause any delay or lag (see Section V for more details). 
+For this Navigation Bar, I used nested div tags to contain my name MJBS. (abbr) and the hamburger which is a switch to show the letter. I did this so that when the page is loaded, the typing effect I made with JavaScript will not cause any delay or lag (see Section V for more details). 
    <div class = "navbar">
 
         <div class = "container flex">
@@ -60,8 +60,8 @@ For this Navigation Bar, I used nested div tags to contain my name MJBS. (abbr) 
 The navbar is the body of the navigation bar of the page. It has a 70px height and background color of black. I set its position to sticky so that it will stick to the top (top is set to 0) whenever the user scroll down. The container class is a container for my name and the hamburger. It has a maximum-width of 1500px so that it will have some space from both sides. The flex class is an another class that I added to separate my name and the hamburger. It was achieved using flexbox and justify content of space-between. Adding to this, to center the flex class the margin of the container class must be set to 0 and auto. The first value is for the top and bottom margin, and the second value is for the left and right margin.
 The name (MJBS.) is written with the font Montserrat that I imported from google fonts using the @import rule of css. I separated the letters using <span>  to set the other letter (S.) to a different color to provide more stylish look.
  
-The blinking cursor is a span class with a content &nbsp; or Non-Breaking Space. A non-breaking space is a space that will not break into a new line. I planned to use this together with the typing effect I did with JavaScript (See Section V) but it won’t work, that’s why I included it in my name instead. The blinking animation is achieved using @keyframes of CSS.
-The hamburger is a another division that is within the navbar div. It has three children divisions with classes named hamburger-line.The hamburger lines are the three lines that you can see, they have a width of 25px and height of 3px. This is the switch to generate the letter. Whenever the hamburger is clicked, the .active class is added using Javascript to provide the styles that I added in CSS. The .active class contains the property transform which rotates the lines.
+The blinking cursor is a span class with a content &nbsp; or Non-Breaking Space. A non-breaking space is a space that will not break into a new line. I planned to use this together with the typing effect that I did with JavaScript (See Section V) but it won’t work, that’s why I included it in my name instead. The blinking animation is achieved using @keyframes of CSS.
+The hamburger is an another division that is within the navbar div. It has three children divisions with classes named hamburger-line.The hamburger lines are the three lines that you can see, they have a width of 25px and height of 3px. This is the switch to generate the letter. Whenever the hamburger is clicked, the .active class is added using JavaScript to provide the styles that I added in CSS. The .active class contains the property transform which rotates the lines.
 .hamburger.active .hamburger-line:nth-child(2) {
     opacity: 0;
 }
@@ -75,7 +75,15 @@ The hamburger is a another division that is within the navbar div. It has three 
 }
 
 The translateY property adjust the lines positions in the Y axis while the rotate property rotates the child 1 and 3 line. The 2nd child is hidden. This is all needed to to make the X symbol.
-To provide more design, I added a transition delay to the baseclass so that there will be a delay whenever the hamburger is clicked.
+To provide more design, I added a transition delay to the base class so that there will be a delay whenever the hamburger is clicked.
+
+
+
+
+
+
+
+
 
 
 • The Mouse and Title of the Activity
@@ -110,7 +118,23 @@ I designed this part in primary.css file.
 One mistake that I did here is naming the id as Exercise. It should be Activity and not Exercise but it was too late when I realized, there will be bugs and errors if I change the name as I added a lot of styles already.
 Nonetheless, it’s working fine. 
 
-The mouse symbol is a symbol to scroll as I removed the scrollbar of the page. The mouse symbol is contained inside the Exercise container together with the Activity Title. The mouse symbol is achieved using a div with a width of 32px  and a height of 60px then setting its border-radius to 32px making it look like a vertical oval. The wheel is a span class with a width of 8px and a height of 10px making it look like a circle with a bit of a height. The scroll animation is achieved using animation and @keyframes in CSS. The keyframes manipulate the position of the cirle. The first value of translate is for the X-axis and the second value is for the Y-axis. First, the position is set to translate (-50%, 0) putting the circle at middle of the container. Before this, you must set the child’s position to absolute and the parent element’s position to relative. Absolute position removes the element from the document flow, so it must be relative to the parent element. Going back, the 20%, 30% value of @keyframe is opacity 1 because when the keyframe is at 100% it will turn into opacity 0 to produce a smooth fade-out animation. The most important part of the keyframe is its value in 90%, it will translate the circle’s position from (-50%, 0) to (-50%, 150%). This produces a downward motion plus adding an infinite value in the animation property to make it move forever. 
+The mouse symbol is a symbol to scroll as I removed the scrollbar of the page. 
+::-webkit-scrollbar {
+    width: 0.4vw;
+    display: none;
+}
+As you can see it is displayed as none. But in case, the other browsers does not support it. I have prepared a ready designed scrollbar. 
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+}
+  
+I won’t go deep into this as I don’t plan to use this. But simply put, I re-designed the default scrollbar. The -thumb is the one that you move, and the -track is the container.
+The mouse symbol is contained inside the Exercise container together with the Activity Title. The mouse symbol is achieved using a div with a width of 32px  and a height of 60px then setting its border-radius to 32px making it look like a vertical oval. The wheel is a span class with a width of 8px and a height of 10px making it look like a circle with a bit of a height. The scroll animation is achieved using animation and @keyframes in CSS. The keyframes manipulate the position of the cirle. The first value of translate is for the X-axis and the second value is for the Y-axis. First, the position is set to translate (-50%, 0) putting the circle at middle of the container. Before this, you must set the child’s position to absolute and the parent element’s position to relative. Absolute position removes the element from the document flow, so it must be relative to the parent element. Going back, the 20%, 30% value of @keyframe is opacity 1 because when the keyframe is at 100% it will turn into opacity 0 to produce a smooth fade-out animation. The most important part of the keyframe is its value in 90%, it will translate the circle’s position from (-50%, 0) to (-50%, 150%). This produces a downward motion plus adding an infinite value in the animation property to make it move forever. 
 For the arrow beside the mouse, I used Bootstrap (a framework of CSS) to get the icon to provide more emphasis on the scroll down function. The arrow is hidden and the mouse will not animate until the hamburger is clicked, I used JavaScript to add their own .active class respectively. 
 const arrowMouse = document.querySelector('.arrow-down');
 
@@ -119,7 +143,41 @@ hamburger.addEventListener('click', () => {
 });
  
 The document.querySelector selects the  .arrow-down class. For more details about the use of JavaScript, see the Section V of this report.
-For the neon look, I added a box-shadow to the border of the Exercise-container div.  I values are doubled to make the shadow thicker but not compressed. The reflection is achieved using the pseudoselect ::before. I used max-width and margin auto to center the container, I did not use flexbox so that its contents will stay as block elements (block elements take up the whole width). I used flexbox for anchor and paragraphs inside the file div to center them. I also set the opacity to none and visibility to hidden when hamburger is clicked to provide more emphasis for the letter. Pointer-events is set to none to avoid misclicking the downloadable file when the container is hidden as the opacity and visibility only hide the container VISUALLY. To completely remove a feature, you must display it as none. This also remove the space its taking, the downside is you cannot animate or put a transition delay to the element. The transform perspective property make the ::before selector (square) look 3d or more like an isosceles trapezoid. The rotateX is needed to achieve the 3d look of perspective, without it the perspective property will only look like it reduced the size of the light. Scale  on the other hand is for the adjustment of size, first value of scale is for scaleX and the second value is for scaleY. To finish up the reflection texture, you must set the filter: blur to (64px) or more.
+#Exercise-container {
+    border: solid 2px white;
+
+    position: relative;
+
+    max-width: max-content;
+    margin: 0 auto;
+
+    border-radius: 15px;
+    padding: 20px 20px;
+
+    transition: all 0.8s linear;
+
+    text-shadow: 0 0 3px rgb(255, 255, 255, 0.3), 0 0 16px cyan;
+
+    box-shadow: 0 0 10px cyan, 0 0 10px cyan;
+}
+
+#Exercise-container::before {
+    content: '';
+
+    position: absolute;
+    top: 140px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient( cyan, white, cyan);
+    
+    transform: perspective(120px) rotateX(55deg) scale(1, 0.5);
+
+    filter: blur(64px);
+}
+
+For the neon look, I added a text-shadow for the text and a box-shadow to the border of the Exercise-container div.  Its values are doubled to make the shadow thicker but not compressed. The reflection is achieved using the pseudoselect ::before. I used max-width and margin auto to center the container, I did not use flexbox so that its contents will stay as block elements (block elements take up the whole width). I used flexbox for anchor and paragraphs inside the file div to center them. I also set the opacity to none and visibility to hidden when hamburger is clicked to provide more emphasis for the letter. Pointer-events is set to none to avoid misclicking the downloadable file when the container is hidden as the opacity and visibility only hide the container VISUALLY. To completely remove a feature, you must display it as none. This also remove the space its taking, the downside is you cannot animate or put a transition delay to the element. The transform perspective property make the ::before selector (square) look 3d or more like an isosceles trapezoid. The rotateX is needed to achieve the 3d look of perspective, without it the perspective property will only look like it reduced the size of the light. Scale  on the other hand is for the adjustment of size, first value of scale is for scaleX and the second value is for scaleY. To finish up the reflection texture, you must set the filter: blur to (64px) or more.
 
 IV.	Letter
 My styles.css mainly used for the design for the webpage itself and the body of the letter. The background color of the body is white with an opacity of 0.75. (which is why I use rgb). The body of the letter is glowing using @keyframes of CSS.
@@ -169,7 +227,7 @@ You might be wondering how the marks and other colors except black and white cha
 }
 
 
-I added hue-rotate to the inner div class (the first child element of the div .letter ). I also set its animation to infinite so it will animate forever with a 10 second delay between travels. Why didn’t I use hue-rotate in the first place instead of box-shadows? The answer is, hue-rotate does not follow the transition delay between hover in and out, hence it will animate INSTANTLY producing an obnoxious design. But why? Hue is different, its not actually an animation. Just like it says that hue animation rotates over color specters, but it is done so fast that it looks like an animation. It rotates over thousands of colors without dramatically altering the color- -specter family. It follows the sequence, it knows how to properly transition from color to color (Example: green to pink), while we do not.   
+I added hue-rotate to the inner div class (the first child element of the div .letter ). I also set its animation to infinite so it will animate forever with a 10 second delay between travels. Why didn’t I use hue-rotate in the first place instead of box-shadows? The answer is, hue-rotate does not follow the transition delay between hover in and out (even if I used the animation for the baseclass and didn’t use the hover selector), hence it will animate INSTANTLY producing an obnoxious design. But why? Hue is different, its not actually an animation. Just like it says that hue animation rotates over color specters, but it is done so fast that it looks like an animation. It rotates over thousands of colors without dramatically altering the color- -specter family. It follows the sequence, it knows how to properly transition from color to color (Example: green to pink), while we do not.   
 The fade animation of the letter is achieved using the scale property of CSS
 #letter {
     opacity: 0;
@@ -191,22 +249,19 @@ So with this, I tried experimenting. When you only put one value in scaleY.
 transform: scaleY(1, 1);
 The animation starts from the middle looking like a folding animation vertically. When there are two values, the animation will starts to look like its fading. When we remove the Y property and leave it only as scale, as I said from above, the first value will target the X-axis meaning it will create a horizontal animation. I chose to put two values to get the fade animation because it looks better and not causing any lag.
 
-Now for the design of the content of the letter. Some tags were deprecated and cannot be used so I still have to use CSS instead of relying on HTML tags (Example. <big> <font> etc.).
+Now for the design of the content of the letter. Some tags were deprecated and cannot be used so I still have to use CSS instead of relying only on HTML tags (Example. <big> <font> etc.).
 
-
-
-
-Heading 
+• Heading 
 The heading is contained inside the .letter and .inner class. It is the first child of inner. 
-
-    <div id = "letter-head">
+<div id = "letter-head">
                 <div id = "title">
                     <h1 class = "heading">Title</h1>
 
                     <div class = "labels">
                         <h2>CCS10 Summarized Activity-1</h2>
                         <div class = "underline"></div>
-                    </div> 
+                    </div>
+                    
                 </div>
 
                 <div id = "heading">
@@ -238,7 +293,7 @@ The heading is contained inside the .letter and .inner class. It is the first ch
                     </div>
 
                 </div>
-    </div>
+            </div>
 
  
 The background of the heading of my letter changes because I added a background-image on the hover selector of the class. It changes color because it’s affected by the hue-rotate that I set. The box that you can see when you hover over the headings (Ex. Title) is a container with a max-width of max-content so that the width of the container is relative to its content and margin: 0 auto to center the container. The shadow is achieved using box-shadow 
@@ -247,25 +302,22 @@ The background of the heading of my letter changes because I added a background-
 The first and second value targets the X and Y axis respectively. The third value is for the blur of the color and the fourth value is the color.
  
 The underline is a div under the h2 headings. 
-
-    <div class = "underline"></div>
+  <div class = "underline"></div>
 
 I can set its width to 100% as it is relative to the max content of the container. The animation is achieved using the scale property that I explained above.
 
-
-
-Body 
+• Body 
 For design of the body, I used some inline styles (which is not recommended and considered as bad practice, but I used them in this case because the page is not that long and complex) for the styling of some words and sentences as some of the HTML tags are deprecated and are not working with my IDE.
  
 The questions here are italicized using the <i> tag so that questions and things that I want to emphasize will stand out. 
 The word imaginary is on the top using the tag <sup>. I used this to emphasize the imagination means your mind is beyond the clouds.  :)
 Some words are underlined because I want to emphasize the adjectives and problems that I want to direct to myself.
 As you can see the word fascinated has different colors because I want to highlight the level of fascination that I felt with technology and computers.
-Speaking of technology and computers, you can see a dashed border surrounding the words. When you hover over it, a black background with an animation similar to the letter using scale will come out. I did this to show the fascination that I felt with them in the past.
+Speaking of technology and computers, you can see a dashed border surrounding the words. When you hover over it, a black background with an animation similar to the letter using scaleY will come out. I did this to show the fascination that I felt with them in the past.
 There are sentences that are marked because I want to highlight the memories or events that were very important at that time. The <mark> tag is changing color due to the hue-rotate that I set.
 Don’t have one  is crossed because I want to show the absence of the gadgets.
 Cardboards is actually highlighted with the color brown. However, due to the hue-rotate that I set, it’s changing color but if you see closely, the first and last color of the travels is brown.
-Similar to cardboard, good is highlighted with green because as the world see, green symbolizes correctness or goodness.
+Similar to cardboard, good is highlighted with green because as everyone  knows, green symbolizes correctness or goodness.
 Excitement, the joy, and the happy feeling is highlighted too, but there is a difference, instead of using the <mark> tag I used CSS (inline styles to be exact).  
 background-image: linear-gradient(to right,yellow, cyan, orange);
 
@@ -396,6 +448,17 @@ For the quote, I surrounded the texts using the <q> tags and I also put the .emp
 The class has; 
     background-image: linear-gradient(to right, yellow, lime, orange);
 and a changing scale to 1.2 when you hover over it.
+
+
+ 
+For the signature, I used https://www.signwell.com/online-signature/draw/ to draw my signature. I contained it within a span with a class named .img. The sole purpose of the class is to move the image using position relative.
+I might have other img elements that is why I used a span and used the selector > to target the img itself.
+.img > img{
+    position: relative;
+    top: 180px;
+}
+
+• Footer 
 Lastly, the footer is contained inside a div with an ID named me. The div has only one child element, a footer using <footer> tags. I used flexbox for the div to put it at the end using the value flex-end. 
 #me {
     display: flex;
@@ -437,8 +500,6 @@ I also added a reflection effect on it when you hover using text-shadow. Text-sh
 
 
 
-
-
 V.	JavaScript
 
 My main.js file is for the scripts of the webpage. The first function of this file is for Event Delegation, simply put, it is the efficient selection of the HTML DOM. It is a function using .addEventListener where it listens to my commands, I used ‘click’ for this function. The main purpose of this function is to add the respective .active class of each classes.
@@ -471,7 +532,7 @@ hamburger.addEventListener('click', () => {
 The function listens to the hamburger class, as it is only the interactive feature of the page.
 
 
-Typing Effect
+• Typing Effect
   Including in my main.js file is a function to make a typing effect.
 const Intro = document.querySelector('.Intro');
 const text = "CCS10 Summarized Activity 1";
@@ -507,6 +568,7 @@ document.addEventListener("DOMContentLoaded", function() {
 The .addEventListener is added to listen to the whole document when it is loaded using the “DOMContentLoaded”. Inside this listener, you must call the function typeEffect(); to run it ONLY when the html is finished on loading, therefore you must set the <script> tag on the bottom of your body or else your JavaScript might not run or cause lag.
  <script src = "main.js"></script>
 __________________________________________________________________
-This will be the end of my Narrative Report. Thank you.
+VI.	End
+This marks the end of my Narrative Report. Thank you.
 
 Santos, Mark Jerome B. | BSIT 1-A -->
