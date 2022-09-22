@@ -419,12 +419,6 @@ q:hover {
     transform: scale(1.2);
 }
 
-@media all screen and (max-width: 1366px) {
-    .fifth-sub-part, q {
-        font-size: 20px;
-    }
-}
-
 
 
 /* 
