@@ -1,4 +1,4 @@
-CCS10 Lab Summarized Activity 1
+<!-- CCS10 Lab Summarized Activity 1
 Mark Jerome B. Santos BSIT 1 - A
 
 I.	Introduction
@@ -196,15 +196,15 @@ Now for the design of the content of the letter. Some tags were deprecated and c
 
 Heading 
 The heading is contained inside the .letter and .inner class. It is the first child of inner. 
-<div id = "letter-head">
+
+    <div id = "letter-head">
                 <div id = "title">
                     <h1 class = "heading">Title</h1>
 
                     <div class = "labels">
                         <h2>CCS10 Summarized Activity-1</h2>
                         <div class = "underline"></div>
-                    </div>
-                    
+                    </div> 
                 </div>
 
                 <div id = "heading">
@@ -236,7 +236,7 @@ The heading is contained inside the .letter and .inner class. It is the first ch
                     </div>
 
                 </div>
-            </div>
+    </div>
 
  
 The background of the heading of my letter changes because I added a background-image on the hover selector of the class. It changes color because it’s affected by the hue-rotate that I set. The box that you can see when you hover over the headings (Ex. Title) is a container with a max-width of max-content so that the width of the container is relative to its content and margin: 0 auto to center the container. The shadow is achieved using box-shadow 
@@ -245,7 +245,8 @@ The background of the heading of my letter changes because I added a background-
 The first and second value targets the X and Y axis respectively. The third value is for the blur of the color and the fourth value is the color.
  
 The underline is a div under the h2 headings. 
-  <div class = "underline"></div>
+
+    <div class = "underline"></div>
 
 I can set its width to 100% as it is relative to the max content of the container. The animation is achieved using the scale property that I explained above.
 
@@ -506,4 +507,4 @@ The .addEventListener is added to listen to the whole document when it is loaded
 __________________________________________________________________
 This will be the end of my Narrative Report. Thank you.
 
-Santos, Mark Jerome B. | BSIT 1-A
+Santos, Mark Jerome B. | BSIT 1-A -->
