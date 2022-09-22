@@ -419,6 +419,10 @@ q:hover {
     transform: scale(1.2);
 }
 
+.img > img{
+    position: relative;
+    top: 180px;
+}
 
 
 /* 
