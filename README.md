@@ -1,3 +1,5 @@
+<h1>Whole markdown is set as comment, edit to see.</h1>
+
 <!-- CCS10 Lab Summarized Activity 1
 Mark Jerome B. Santos BSIT 1 - A
 
